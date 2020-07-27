@@ -1,0 +1,240 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.niuyifei</groupId>
+  <artifactId>niuyifei_parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>niuyifei_bean</module>
+  	<module>niuyifei_mapper</module>
+  	<module>niuyifei_service</module>
+  	<module>niuyifei_controller</module>
+  </modules>
+  
+  <!-- 
+  		鎼缓SSM鏋舵瀯
+  			Spring 锛圛OC\AOP\ORM\MVC\TX\JACSON锛?
+  			JSTL
+  			pageHelper
+  			IO
+  			鏁版嵁搴撻┍鍔ㄥ寘
+  			鏁版嵁婧?
+  			JSR-303 bean楠岃瘉
+  			MyBatis
+  			mybatis-spring
+   -->
+   <!-- properties锛歅OM鏂囦欢甯搁噺瀹氫箟鍖猴紝鍦ㄦ枃浠朵腑鍙互鐩存帴寮曠敤锛屽鐗堟湰銆佺紪鐮佺瓑 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>4.3.8.RELEASE</spring.version>
+	</properties>
+	
+	
+  <dependencies>
+   		<!-- 
+   			鏀寔 @Resource 娉ㄥ叆
+   		 -->
+   		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>annotations-api</artifactId>
+		    <version>6.0.14</version>
+		</dependency>
+		  		
+		 <!-- 
+		 	ResponseBody
+		  -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.8.10</version>
+		</dependency>
+  
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<!-- log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<!-- spring ioc aop dao orm webmvc..... -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+			
+			<!-- 渚濊禆鎺掗櫎 -->
+			<!-- <exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+			</exclusions> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.6.8</version>
+		</dependency>
+
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.2.8</version>
+		</dependency>
+		
+		<!-- mybatis鍜宻pring鏁村悎 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		
+		<!-- 鏁版嵁搴撻┍鍔?-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.9</version>
+		</dependency>
+		
+		<!-- 鏁版嵁婧?-->
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- 鏂囦欢涓婁紶 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		
+		<!-- pageHelper -->
+		<dependency>
+	      <groupId>com.github.pagehelper</groupId>
+	      <artifactId>pagehelper</artifactId>
+	      <version>4.1.6</version>
+	    </dependency>
+	    
+	    <!-- Bean楠岃瘉 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.1.0.Final</version>
+		</dependency>
+		
+		<!-- 鏃ュ織 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.26</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.26</version>
+		</dependency>
+	    
+   </dependencies>
+   
+   <build>
+   		<plugins>
+   			<!-- tomcat鎻掍欢  杩愯鍛戒护锛歵omcat7:run  -->
+	  		<plugin>
+	  			<groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			    	<!-- 绔彛鍙?-->
+					<port>8080</port>
+					<!-- 椤圭洰鏍硅矾寰?-->
+					<path>/</path>
+					<uriEncoding>UTF-8</uriEncoding>
+				</configuration>
+	  		</plugin>
+
+			<!-- Jetty鎻掍欢锛?闈炲畼鏂规彃浠讹紝绗笁鏂规彃浠讹紝鐢ㄤ簬鍚姩Web鏈嶅姟銆傝繍琛屽懡浠わ細jetty:run -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.2.v20170220</version>
+				<configuration>
+					<scanIntervalSeconds>300</scanIntervalSeconds>
+					<httpConnector>
+						<port>80</port>
+					</httpConnector>
+					<webApp>
+						<contextPath>/</contextPath>
+					</webApp>
+					<stopPort>9966</stopPort>
+				</configuration>
+			</plugin>
+   		</plugins>
+   </build>
+  
+</project>

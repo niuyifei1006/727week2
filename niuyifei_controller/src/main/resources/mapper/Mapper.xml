@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niuyifei.mapper.MeetMapper">
+	<select id="selMeet" resultType="com.niuyifei.bean.Meet">
+		SELECT * from t_meeting m,t_meeting_type t where m.tid=t.tid
+	</select>
+	<select id="selType" resultType="com.niuyifei.bean.Type">
+		select * from t_meeting_type
+	</select>
+	<insert id="addMeet" parameterType="com.niuyifei.bean.Meet">
+		insert into t_meeting (code,name,start_time,end_time,create_time,tid) 
+		values
+		(#{code},#{name},#{start_time},#{end_time},now(),#{tid})
+	</insert>
+	<update id="update" parameterType="com.niuyifei.bean.Meet">
+		update t_meeting set 
+		code=#{code},name=#{name},start_time=#{start_time},end_time=#{end_time},create_time=now(),cid=#{cid} 
+		where mid=#{mid}
+	</update>
+</mapper>
