@@ -26,7 +26,7 @@
    <!-- properties锛歅OM鏂囦欢甯搁噺瀹氫箟鍖猴紝鍦ㄦ枃浠朵腑鍙互鐩存帴寮曠敤锛屽鐗堟湰銆佺紪鐮佺瓑 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.8.RELEASE</spring.version>
+		<spring.version>5.2.22.RELEASE</spring.version>
 	</properties>
 	
 	
